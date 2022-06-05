@@ -52,23 +52,39 @@
                 <form class="modal-form">
                     <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                 <div class="modal-field">
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" name="Имя" autofocus>
 
-                    <label for="tel">Телефон</label>
-                    <input type="tel" id="tel" name="tel">
+                    <div class="modal-user">
+                    <label for="name" class="modal-user-input">Имя</label>
+                    <input type="text" id="name" name="Имя" autofocus class="user-input">
+                    <svg class="modal-icon" width="18" height="18" >
+                        <use href:="./images/symbol-defs.svg#person-black"></use>
+                    </svg>
+                    </div>
 
-                    <label for="email">Почта</label>
-                    <input type="email" id="email" name="email">
+                   <div>
+                    <label for="tel" class="modal-user-input">Телефон</label>
+                    <input type="tel" name="tel" id="tel" class="user-input">
+                        <svg class="modal-icon" width="18" height="18">
+                            <use href:="./images/symbol-defs.svg#phone-black"></use>
+                        </svg>
+                    </div>
 
-                    <label for="comment">Комментарий</label>
-                    <textarea name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+                    <div>
+                    <label for="email" class="modal-user-input">Почта</label>
+                    <input type="email" name="email" id="email" class="user-input">
+                        <svg class="modal-icon" width="18" height="18">
+                            <use href:="./images/symbol-defs.svg#email-black"></use>
+                        </svg>
+                    </div>
 
-                    <input type="checkbox" name="" id="privacy">
-                    <label for="privacy">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                    <label for="comment" class="modal-user-input">Комментарий</label>
+                    <textarea class="user-input" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+
+                    <input type="checkbox" name="" id="privacy" class="user-input-checkbox">
+                    <label for="privacy" class="modal-user-input">Соглашаюсь с рассылкой и принимаю Условия договора</label>
                     
-                    <button type="submit">Отправить</button>
                 </div>
+                    <button type="submit" class="modal-button">Отправить</button>
                 </form>
                 
                 <button class="close-modal" data-modal-close>X</button>
