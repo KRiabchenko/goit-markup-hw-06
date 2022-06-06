@@ -333,9 +333,12 @@ align-items: center;
     margin-bottom: 10px;
 }
 .modal-user-input {
-    display: flex;
-    text-align: start;
+    position: relative;
 
+    display: block;
+    text-align: start;
+    margin-bottom: 10px;
+    
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -352,6 +355,14 @@ align-items: center;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: border 250ms var(--timing-function);
+}
+
+.user-input:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+
 }
 
 .modal-field textarea {
@@ -370,26 +381,18 @@ align-items: center;
 
     color: rgba(117, 117, 117, 0.5)
 }
-.modal-user {
-    position: relative;
-}
+
 .modal-icon {
     position: absolute;
     top: 70%;
     left: 15px;
     transform: translateY(-70%);
 
+    transition: fill 250ms var(--timing-function);
 }
 
-.user-input:focus-within + .modal-icon {
-    outline: none;
-    fill: #2196F3;
-    background-color: #FFFFFF;
-    border-color: #188CE8;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-    0px 1px 1px rgba(0, 0, 0, 0.14), 
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+.modal-user-input:focus-within>.modal-icon {
+    fill: var(--accent-color);
 }
 
 .modal-button {
@@ -429,7 +432,17 @@ align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
 }
-         
+
+.modal-icon-close {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+}
+
+.close-modal:focus-within > .modal-icon-close {
+    fill: var(--accent-color);
+}
 
 /* ---------------------- FEATURES ---------------- */
 
