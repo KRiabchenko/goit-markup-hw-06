@@ -79,8 +79,16 @@
                     <label for="comment" class="modal-user-input">Комментарий</label>
                     <textarea class="user-input" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
 
-                    <input type="checkbox" name="" id="privacy" class="user-input-checkbox">
-                    <label for="privacy" class="modal-user-input">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                    
+                    <label class="modal-user-input privacy">
+                        <input class="user-input-checkbox" type="checkbox" name="">
+                        <span class="check-icon">
+                            <svg class="modal-check" width="11" heght="8">
+                                <use href="./images/symbol-defs.svg#check"></use>
+                            </svg>
+                        </span>
+                        Соглашаюсь с рассылкой и принимаю Условия договора
+                    </label>
                     
                 </div>
                     <button type="submit" class="modal-button">Отправить</button>
