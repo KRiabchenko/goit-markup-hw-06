@@ -349,30 +349,41 @@ align-items: center;
 }
 
 .privacy {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     text-align: center;
     justify-content: center;
     padding-left: 9px;
     padding-top: 4px;
-
-    outline: 1px solid tomato;
 }
 
 .check-icon {
+    display: inline-block;
     width: 16px;
     height: 15px;
     margin-right: 9px;
-    border: 3px solid black;
+    border: 2px solid var(--title-text-color);
+    border-radius: 3px;
 }
 
-.modal-check {
-    width: 16px;
-    height: 15px;
-    fill: none;
+.user-input-checkbox:checked + .check-icon {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url(../images/check.svg);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: contain;  
 }
 
 .user-input-checkbox {
-    appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0); 
 }
 
 .user-input {
@@ -390,7 +401,6 @@ align-items: center;
 .user-input:focus {
     outline: none;
     border: 1px solid var(--accent-color);
-
 }
 
 .modal-field textarea {
